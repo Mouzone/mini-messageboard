@@ -1,7 +1,9 @@
 <html>
     <body>
-        <% messages.forEach((message) => {%>
-            <%- include('message', {message:message}) %>
-        <%})%>
+        <% if (messages.length) {%>
+            <% messages.forEach((message) => {%>
+                <%- include('message', {message:message}) %>
+            <%})%>
+        <% }%>
     </body>
 </html>
