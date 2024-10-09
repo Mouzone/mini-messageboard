@@ -16,7 +16,7 @@ const messageNewPost = async (req, res) => {
 }
 
 const messageMessageGet = async (req, res) => {
-    const message = db.getSpecificMessage(req.params.id)
+    const message = await db.getSpecificMessage(req.params.id)
     res.render("messagePage", { message })
 }
 
